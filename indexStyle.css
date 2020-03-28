@@ -99,7 +99,23 @@
 }
 /*start reset*/
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0px!important;
+    margin: 0px!important;
+    color: #44464a;
 }
 /*end reset*/
+/*RH nav - put back at end*/
+#ghostNav{
+    display:none;
+    text-decoration-style: none;
+}
+#catPaw{
+    display:none;
+}
+#mugwrap{
+    max-width: 10%;
+}
+#tablePic{
+    width:100vw;
+}
+
