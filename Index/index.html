@@ -7,26 +7,79 @@
      <!--this makes it responsive, don't skip it-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
      <link rel="stylesheet" type="text/css" href="./style.css">
+
+     <script src="./script.js" defer></script>
     <title>Portfolio, with Bootstrap</title>
 </head>
 <body>
+    <nav class="row">
+        <div id="nameWrap" class="col-md-3 col-lg-2">
+            <h2>karen krog</h2>
+        </div>
+        <div id="kMenuWrap" class="col-2">
+            <img id="kMenuPic" src="../art/kmenu.svg" alt="k/hamburger dropdown menu button" onmouseover="addShadow(this)">
+            <!--do not like default box shadow, also needs a mouseout away if keep-->
+            <script>
+                addShadow=()=>{
+                    document.getElementById('kMenuPic').className += "shadow p-3 mb-5 bg-white rounded";
+                }
+            </script>
+        </div>
+        <div class="spacer col-md-3 col-lg-6"></div>
+        <div id="menuR" class="col-md-6 col-lg-4">
+            <ul>
+                <!--NOTE thought. Maybe make this icons that flip to text on hover state??-->
+                <li><a href="./projects/projects.html">Projects</a></li>
+                <li><a href="./resume/resume.html">Resume</a></li>
+                <li><a href="./about/about.html">Profile</a></li>
+                <li><a href="./contact/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div id="menuL" class="col-10">
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li<a href="#resume">Resume</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="canvasWrap" class="row">
+        <canvas id="canvas" class="col-12">Your browser doesn't support canvas.
+        </canvas>
+        <script src="../art/waves.js"></script>
+    </div>
+    <!--put best 3 samples here-->
+    <div id="projects" class="row">
+        <h1>projects</h1>
+        <figure class="col-12 col-sm-6 col-lg-4">
+            <figcaption></figcaption>
+        </figure>
+        <figure class="col-12 col-sm-6 col-lg-4">
+            <figcaption></figcaption>
+        </figure>
+        <figure class="col-12 col-sm-6 col-lg-4">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <!--div id="old,maybe reuse">
     <aside>
-        <!--collapse into logo-->
+        <NOTE collapse into logo>
         <i class="ikkons"></i>
         <nav class="ktoggle">
             <ul>
-                <!--thought. Maybe make this icons that flip to text on hover state??-->
-                <li><a href="./github.html">Github</a></li>
-                <li<a href="./resume.html">Resume</a></li>
-                <li><a href="./profile.html">Profile</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <NOTE thought. Maybe make this icons that flip to text on hover state??>
+                <li><a href="./projects/projects.html">Projects</a></li>
+                <li<a href="./resume/resume.html">Resume</a></li>
+                <li><a href="./about/about.html">Profile</a></li>
+                <li><a href="./contact/contact.html">Contact</a></li>
             </ul>
         </nav>
     </aside>
     <main>
         <div class="hero">
             <h1>Let's say something</h1>
-            <!--use a bg img and a border with collapse for the next-->
+            <NOTE use a bg img and a border with collapse for the next>
             <nav class="projnavcol">
                 <a href="#proj1">Project Type 1</a>
                 <a href="#proj2">Project Type 2</a>
@@ -84,6 +137,7 @@
             </div>
         </div>
     </main>
+    </div-->
     <footer>
         <!--set up some columns of info here. once there's some info to be had.-->
     </footer>
