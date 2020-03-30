@@ -99,15 +99,32 @@
 }
 /*start reset*/
 * {
-    padding: 0px!important;
-    margin: 0px!important;
+    padding: 0px;
+    margin: 0px;
     color: #44464a;
     font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
 }
 /*end reset*/
 /*RH nav - put back at end*/
+
 #nameWrap h2{
     font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
+    padding: 1rem 0px 0px 1rem;
+}
+nav{
+    margin: 1rem;
+}
+#menuR ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 1rem;
+}
+#menuR li:hover{
+    font-style: italic;
+    text-decoration: none;
 }
 #kMenuWrap{
     display: none;
