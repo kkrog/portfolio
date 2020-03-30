@@ -115,6 +115,10 @@
 #menuL{
     display:none;
 }
+#canvasWrap{
+    height: 20rem;
+}
+/*so, need to fix the canvas positioning and sizing in the javascript*/
 #canvas{
     display: block;
     overflow: hidden;
