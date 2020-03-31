@@ -13,28 +13,12 @@
 </head>
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-top-fixed">
-            <div id="nameWrap" class="something navbar-brand">
-                <h2>karen krog</h2>
-            </div>
-            <div id="kMenuWrap" class="navbar-toggler">
-                <img id="kMenuPic" class="navbar-toggler-icon" src="./art/kmenu.svg" alt="k/hamburger dropdown menu button" onmouseover="addShadow(this)">
-                <!--do not like default box shadow, also needs a mouseout away if keep-->
-                <script>
-                    addShadow=()=>{
-                        document.getElementById('kMenuPic').className += "shadow p-3 mb-5 bg-white rounded";
-                    }
-                </script>
-            </div>
-            <!--don't use spacer divs use bootstrap alignment classes-->
-            <div id="menuR" class="something">
-                <!--NOTE thought. Maybe make this icons that flip to text on hover state??-->
-                <a href="#projects" class="nav-item nav-link">Projects</a>
-                <a href="#resume" class="nav-item nav-link">Resume</a>
-                <a href="#about" class="nav-item nav-link">Profile</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <div id="menuL" class="collapse navbar-collapse">
+        <nav class="navbar sticky-top navbar-expand-md">
+            <h2 id="nameWrap" class="something navbar-brand">
+                karen krog
+            </h2>
+            <img id="kMenu" src="./art/kmenu.svg" alt="k/hamburger menu button" class="navbar-toggler" data-toggle="collapse" data-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="navCollapse" class="collapse navbar-collapse justify-content-end">
                 <div class="navbar-nav">
                     <a href="#projects" class="nav-item nav-link">Projects</a>
                     <a href="#resume" class="nav-item nav-link">Resume</a>
@@ -42,6 +26,7 @@
                     <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
+                <!--NOTE ^thought. Maybe make these icons that flip to text on hover state, but only when expanded-->
         </nav>
         <div id="canvasWrap" class="row">
             <canvas id="canvas" class="col-12">Your browser doesn't support canvas.

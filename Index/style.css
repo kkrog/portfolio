@@ -105,31 +105,21 @@
     font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
 }
 /*end reset, start Nav*/
-#nameWrap h2{
+#nameWrap {
     font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
     padding: 1rem 0px 0px 1rem;
 }
 nav{
     margin: 1rem;
 }
-#menuR{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+#navCollapse{
     text-decoration: none;
-    list-style-type: none;
-    padding: 1rem;
 }
-#menuR a:hover{
+#navCollapse a:hover{
     font-style: italic;
-    text-decoration: none;
+    text-decoration: none!important;
 }
-#kMenuWrap{
-    display: none;
-}
-#menuL{
-    display:none;
-}
+
 /*end Nav start Canvas*/
 #canvasWrap{
     height: 20rem;
@@ -151,16 +141,10 @@ nav{
 /*x-small and small size*/
 
 @media (max-width: 767.99px) {
-    #kMenuWrap{
-        display:block;
-    }
-    #kMenuWrap:hover{
-        filter: drop-shadow(5px lightseagreen);
-    }
     #nameWrap{
         display: none;
     }
-    #menuR{
-        display:none;
+    #kMenu{
+        width: 4rem;
     }
 }
