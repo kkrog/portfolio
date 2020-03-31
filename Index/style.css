@@ -104,9 +104,7 @@
     color: #44464a;
     font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
 }
-/*end reset*/
-/*RH nav - put back at end*/
-
+/*end reset, start Nav*/
 #nameWrap h2{
     font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
     padding: 1rem 0px 0px 1rem;
@@ -132,11 +130,23 @@ nav{
 #menuL{
     display:none;
 }
+/*end Nav start Canvas*/
+#canvasWrap{
+    height: 20rem;
+}
+/*so, need to fix the canvas positioning and sizing in the javascript*/
 #canvas{
     display: block;
     overflow: hidden;
     z-index: 0;
 }
+/*end Canvas, start Projects*/
+
+/*end Projects, start About*/
+
+/*end About, start Resume*/
+
+/*end Resume, start Footer*/
 
 /*x-small and small size*/
 

@@ -12,55 +12,109 @@
     <title>Portfolio, with Bootstrap</title>
 </head>
 <body>
-    <nav class="row navbar-toggler">
-        <div id="nameWrap" class="col-md-3 col-lg-2">
-            <h2>karen krog</h2>
+    <div class="container-fluid">
+        <nav class="row">
+            <div id="nameWrap" class="col-md-3 col-lg-2">
+                <h2>karen krog</h2>
+            </div>
+            <div id="kMenuWrap" class="col-2">
+                <img id="kMenuPic" src="../art/kmenu.svg" alt="k/hamburger dropdown menu button" onmouseover="addShadow(this)">
+                <!--do not like default box shadow, also needs a mouseout away if keep-->
+                <script>
+                    addShadow=()=>{
+                        document.getElementById('kMenuPic').className += "shadow p-3 mb-5 bg-white rounded";
+                    }
+                </script>
+            </div>
+            <div class="spacer col-md-3 col-lg-6"></div>
+            <div id="menuR" class="col-md-6 col-lg-4">
+                <ul>
+                    <!--NOTE thought. Maybe make this icons that flip to text on hover state??-->
+                    <li><a href="./projects/projects.html">Projects</a></li>
+                    <li><a href="./resume/resume.html">Resume</a></li>
+                    <li><a href="./about/about.html">Profile</a></li>
+                    <li><a href="./contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="menuL" class="col-10">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li<a href="#resume">Resume</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="canvasWrap" class="row">
+            <canvas id="canvas" class="col-12">Your browser doesn't support canvas.
+            </canvas>
+            <script src="../art/waves.js"></script>
         </div>
-        <div id="kMenuWrap" class="col-2">
-            <img id="kMenuPic" src="../art/kmenu.svg" alt="k/hamburger dropdown menu button" onmouseover="addShadow(this)">
-            <!--do not like default box shadow, also needs a mouseout away if keep-->
-            <script>
-                addShadow=()=>{
-                    document.getElementById('kMenuPic').className += "shadow p-3 mb-5 bg-white rounded";
-                }
-            </script>
+        <div id="projectsHWrap" class="row">
+            <div class="col-8 col-lg-4">
+                <h1>projects</h1>
+            </div>
         </div>
-        <div class="spacer col-md-3 col-lg-6"></div>
-        <div id="menuR" class="col-md-6 col-lg-4">
-            <ul>
-                <!--NOTE thought. Maybe make this icons that flip to text on hover state??-->
-                <li><a href="./projects/projects.html">Projects</a></li>
-                <li><a href="./resume/resume.html">Resume</a></li>
-                <li><a href="./about/about.html">Profile</a></li>
-                <li><a href="./contact/contact.html">Contact</a></li>
-            </ul>
+        <!--put best 3 samples here-->
+        <div id="projects" class="row">
+            <figure class="col-12 col-sm-6 col-lg-4">
+                <img id="p1" alt="1st project" src="../art/index/absnap.png">
+                <figcaption>Faux Bakery Site to Spec</figcaption>
+            </figure>
+            <figure class="col-12 col-sm-6 col-lg-4">
+                <img id="p2" alt="2nd project" src="../art/index/dashsnap.png">
+                <figcaption>Responsive Dashboard</figcaption>
+            </figure>
+            <figure id="f3" class="col-12 col-sm-6 col-lg-4">
+                <img id="p3" alt="3rd project" src="#">
+                <figcaption>Future home of Guessatronic or React App</figcaption>
+            </figure>
         </div>
-        <div id="menuL" class="col-10">
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li<a href="#resume">Resume</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div id="aboutHWrap" class="row">
+            <div class="col-8 col-lg-4">
+                <h1>about</h1>
+            </div>
         </div>
-    </nav>
-    <div id="canvasWrap" class="row">
-        <canvas id="canvas" class="col-12">Your browser doesn't support canvas.
-        </canvas>
-        <script src="../art/waves.js"></script>
-    </div>
-    <!--put best 3 samples here-->
-    <div id="projects" class="row">
-        <h1>projects</h1>
-        <figure class="col-12 col-sm-6 col-lg-4">
-            <figcaption></figcaption>
-        </figure>
-        <figure class="col-12 col-sm-6 col-lg-4">
-            <figcaption></figcaption>
-        </figure>
-        <figure class="col-12 col-sm-6 col-lg-4">
-            <figcaption></figcaption>
-        </figure>
+        <div id="aboutwrap" class="row">
+            <figure class="col-3">
+                <img>
+                <figcaption>about item 1</figcaption>
+            </figure>
+            <figure class="col-3">
+                <img>
+                <figcaption>about item 2</figcaption>
+            </figure>
+            <figure class="col-3">
+                <img>
+                <figcaption>about item 3</figcaption>
+            </figure>
+            <figure class="col-3">
+                <img>
+                <figcaption>about item 4</figcaption>
+            </figure>
+        </div>
+        <div id="resumeHWrap" class="row">
+            <div class="col-8 col-lg-4">
+                <h1>resumé</h1>
+            </div>
+        </div>
+        <div id="resumeWrap" class="row">
+            <div id="resume" class="col-12">
+                <img>
+            </div>
+        </div>
+        <footer class="row">
+            <!--set up some columns of info here. once there's some info to be had.-->
+            <div id="fsocial" class="col-4">
+                <h3>social header nec?</h3>
+                <!--bootstrap list items-->
+            </div>
+            <div id="pagelist" class="col-4">
+                <h3>page links header nec?</h3>
+                <!--bootstrap list items-->
+            </div>
+
+        </footer>
     </div>
     <!--div id="old,maybe reuse">
     <aside>
@@ -138,9 +192,7 @@
         </div>
     </main>
     </div-->
-    <footer>
-        <!--set up some columns of info here. once there's some info to be had.-->
-    </footer>
+
      <!--bootstrap java, push it to bottom//the ORDER is important,don't change it-->
      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
