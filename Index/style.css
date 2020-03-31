@@ -112,7 +112,7 @@
 nav{
     margin: 1rem;
 }
-#menuR ul{
+#menuR{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -120,7 +120,7 @@ nav{
     list-style-type: none;
     padding: 1rem;
 }
-#menuR li:hover{
+#menuR a:hover{
     font-style: italic;
     text-decoration: none;
 }

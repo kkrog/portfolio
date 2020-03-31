@@ -6,19 +6,19 @@
      <meta charset="UTF-8">
      <!--this makes it responsive, don't skip it-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
-     <link rel="stylesheet" type="text/css" href="./style.css">
+     <link rel="stylesheet" type="text/css" href="./index/style.css">
 
-     <script src="./script.js" defer></script>
+     <script src="./index/script.js" defer></script>
     <title>Portfolio, with Bootstrap</title>
 </head>
 <body>
     <div class="container-fluid">
-        <nav class="row">
-            <div id="nameWrap" class="col-md-3 col-lg-2">
+        <nav class="navbar navbar-top-fixed">
+            <div id="nameWrap" class="something navbar-brand">
                 <h2>karen krog</h2>
             </div>
-            <div id="kMenuWrap" class="col-2">
-                <img id="kMenuPic" src="../art/kmenu.svg" alt="k/hamburger dropdown menu button" onmouseover="addShadow(this)">
+            <div id="kMenuWrap" class="navbar-toggler">
+                <img id="kMenuPic" class="navbar-toggler-icon" src="./art/kmenu.svg" alt="k/hamburger dropdown menu button" onmouseover="addShadow(this)">
                 <!--do not like default box shadow, also needs a mouseout away if keep-->
                 <script>
                     addShadow=()=>{
@@ -26,33 +26,31 @@
                     }
                 </script>
             </div>
-            <div class="spacer col-md-3 col-lg-6"></div>
-            <div id="menuR" class="col-md-6 col-lg-4">
-                <ul>
-                    <!--NOTE thought. Maybe make this icons that flip to text on hover state??-->
-                    <li><a href="./projects/projects.html">Projects</a></li>
-                    <li><a href="./resume/resume.html">Resume</a></li>
-                    <li><a href="./about/about.html">Profile</a></li>
-                    <li><a href="./contact/contact.html">Contact</a></li>
-                </ul>
+            <!--don't use spacer divs use bootstrap alignment classes-->
+            <div id="menuR" class="something">
+                <!--NOTE thought. Maybe make this icons that flip to text on hover state??-->
+                <a href="#projects" class="nav-item nav-link">Projects</a>
+                <a href="#resume" class="nav-item nav-link">Resume</a>
+                <a href="#about" class="nav-item nav-link">Profile</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <div id="menuL" class="col-10">
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li<a href="#resume">Resume</a></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div id="menuL" class="collapse navbar-collapse">
+                <div class="navbar-nav">
+                    <a href="#projects" class="nav-item nav-link">Projects</a>
+                    <a href="#resume" class="nav-item nav-link">Resume</a>
+                    <a href="#profile" class="nav-item nav-link">Profile</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                </div>
             </div>
         </nav>
         <div id="canvasWrap" class="row">
             <canvas id="canvas" class="col-12">Your browser doesn't support canvas.
             </canvas>
-            <script src="../art/waves.js"></script>
+            <script src="./art/waves.js"></script>
         </div>
         <div id="projectsHWrap" class="row">
             <div class="col-8 col-lg-4">
-                <h1>projects</h1>
+                <h1 href="./projects/projects.html">projects</h1>
             </div>
         </div>
         <!--put best 3 samples here-->
