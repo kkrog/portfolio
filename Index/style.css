@@ -106,32 +106,70 @@
 }
 /*end reset, start Nav*/
 #nameWrap {
-    font-family: 'Josefin Sans','Myriad Pro','Helvetica',sans-serif;
+    font-size: 2rem;
     padding: 1rem 0px 0px 1rem;
 }
+/*didn't like as much as I though, leaving just in case
+#kMenu:hover{
+    filter: invert(.2) sepia(1) saturate(3) hue-rotate(90deg);
+}*/
 nav{
     margin: 1rem;
 }
 #navCollapse{
     text-decoration: none;
 }
+#navCollapse a{
+    color: #44464a;
+}
 #navCollapse a:hover{
     font-style: italic;
     text-decoration: none!important;
+    color: rgba(0, 194, 171, 0.60);
 }
 
 /*end Nav start Canvas*/
 #canvasWrap{
     height: 20rem;
+    z-index:0;
 }
 /*so, need to fix the canvas positioning and sizing in the javascript*/
 #canvas{
     display: block;
     overflow: hidden;
     z-index: 0;
+    padding: 0!important;
+    margin:-50vh 0px 50vh 0px!important;
 }
 /*end Canvas, start Projects*/
+#projectsHWrap{
+    margin-top: -35vh;
+}
+#projectsWrap {
+    min-height: 40vh;
+    overflow: hidden;
+    display: flex;
+    margin-top:0;
+}
+.projects {
+	margin: 0 1rem;
+    box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.25);
+    transition:
+    flex 0.5s cubic-bezier(0.45,-0.2, 0.45,-0.2), background 0.2s;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
 
+.proj1 { background-image:url(../art/index/absnap.png); }
+.proj2 { background-image:url(../art/index/dashsnap.png); }
+.proj3 { background-image:url(../art/index/phsnap.png); }
+
+.projects.open {
+    flex: 6;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /*end Projects, start About*/
 
 /*end About, start Resume*/
