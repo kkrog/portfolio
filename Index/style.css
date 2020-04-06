@@ -165,7 +165,7 @@ nav{
 .proj2 { background-image:url(../art/index/dashsnap.png); }
 .proj3 { background-image:url(../art/index/phsnap.png); }
 
-.projects.open {
+.projects .open {
     flex: 6;
     background-size: contain;
     background-repeat: no-repeat;
